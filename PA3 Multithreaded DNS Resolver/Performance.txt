@@ -1,0 +1,103 @@
+Manual Test Results:
+
+1 Requester. 1 Resolver. 5 Files. 5 Tests:
+1.29 seconds
+1.26 seconds
+0.45 seconds
+1.46 seconds
+1.68 seconds
+AVG: 1.23 seconds
+
+Sample serviced.txt:
+Thread 0 serviced 5 files
+
+
+
+1 Requester. 3 Resolver. 5 Files:
+2.15 seconds
+0.25 seconds
+1.74 seconds
+1.13 seconds
+1.43 seconds
+AVG: 1.34 seconds
+
+Sample serviced.txt
+Thread 0 serviced 5 files
+
+
+
+3 Requester. 1 Resolver. 5 Files:
+1.15 seconds
+1.50 seconds
+1.13 seconds
+2.20 seconds
+0.25 seconds
+AVG: 1.25 seconds
+
+Sample serviced.txt
+Thread 0 serviced 5 files
+Thread 1 serviced 4 files
+Thread 2 serviced 3 files
+
+
+
+3 Requester. 3 Resolver. 5 Files:
+1.15 seconds
+2.10 seconds
+0.46 seconds
+1.40 seconds
+0.30 seconds
+AVG: 1.08 seconds
+
+Sample serviced.txt
+Thread 2 serviced 3 files
+Thread 0 serviced 5 files
+Thread 1 serviced 4 files
+
+
+
+5 Requester. 5 Resolver. 5 Files:
+1.14 seconds
+1.49 seconds
+1.91 seconds
+1.58 seconds
+1.15 seconds
+AVG: 1.45 seconds
+
+Sample seviced.txt
+Thread 4 serviced 1 files
+Thread 3 serviced 2 files
+Thread 1 serviced 4 files
+Thread 2 serviced 3 files
+Thread 0 serviced 5 files
+
+
+
+8 Requester. 5 Resolver. 5 Files:
+2.11 seconds
+1.46 seconds
+1.70 seconds
+0.56 seconds
+0.26 seconds
+AVG: 1.22 seconds
+
+Sample serviced.txt
+Thread 7 serviced 1 files
+Thread 5 serviced 1 files
+Thread 6 serviced 2 files
+Thread 0 serviced 5 files
+Thread 1 serviced 4 files
+Thread 2 serviced 3 files
+Thread 4 serviced 1 files
+Thread 3 serviced 2 files
+
+
+My fastest results with the manual tests were when there were an equal number of
+requesters and resolvers. With the performance.py test fastest results were also achieved
+when the number of requesters and resolvers were similar and greater than 1 but less than
+8. It is worth noting that my manual test results varied significantly, I took 5 tests for each
+and threw out outliers to try to smooth these results. This all makes sense to me because
+having a significantly larger number of requesters or resolvers would mean that the few
+outnumbered resorces would be blocked from doing their job via the mutexes until
+the other threads completed. 
+
