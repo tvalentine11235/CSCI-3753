@@ -1,0 +1,28 @@
+---------- TO RUN ----------
+
+To run multi-lookup -- From the command line:
+
+1. Navigate to the provided PA3 folder.
+
+2. Type "make" in order to compile the program using the Makefile 
+
+3. Type "./multi-lookup # # <serviced file> <results file> <url files>"
+where # # is the number of requesters and resolvers. <serviced file> is the serviced output file
+<results file> is the output results file and <url files> are your input url files.
+the program is capable of handling any number of requesters, resolvers, and input files but will need
+all of these arguments to run.
+
+4. Type "make clean" in order to delete the executable file.
+
+
+--------- REQUIRED FILES ----------
+
+queue.c / queue.h -- queue structure files
+
+multi-lookup.c / multi-lookup.h -- program code that creates and executes threads. also deletes used memory / structure definitions.
+
+util.c /util.h -- used for DNS calls in order to resolve IP addresses.
+
+names1.txt - names5.txt -- sample urls for testing purposes. Program will run with any collections of urls in .txt format.
+
+
